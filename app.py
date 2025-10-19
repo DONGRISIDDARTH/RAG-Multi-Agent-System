@@ -27,8 +27,8 @@ def create_vector_store(embeddings):
 
 def load_documents():
     web_loader = WebBaseLoader(web_paths=[
-        "https://www.ibm.com/think/topics/convolutional-neural-networks",
-        "https://www.pmindia.gov.in/en/personal_life_story/personal-life-story/"
+        "https://www.abcd.com/think/topics/convolutional-neural-networks",
+        "https://www.abcd.gov.in/en/personal_life_story/personal-life-story/"
     ])
     web_docs = web_loader.load()
 

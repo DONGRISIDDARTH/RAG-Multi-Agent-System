@@ -56,32 +56,7 @@ vector_store = Chroma(
 # Install pypdf
 !pip install -qU pypdf
 
-# # -----------------------------
-# # 6. Load and Split Documents
-# # -----------------------------
-# from langchain_community.document_loaders import WebBaseLoader
-# from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-# loader = WebBaseLoader(
-#     web_paths=("https://www.ibm.com/think/topics/convolutional-neural-networks",
-#                "https://www.pmindia.gov.in/en/personal_life_story/personal-life-story/")
-# )
-# docs = loader.load()
-
-# # Split large text into manageable chunks
-# text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-# all_splits = text_splitter.split_documents(docs)
-
-# # Add chunks to vector DB
-# _ = vector_store.add_documents(documents=all_splits)
-
-# -----------------------------
-# 6. Load Web Pages
-# -----------------------------
-from langchain_community.document_loaders import WebBaseLoader, PyPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-# ✅ Load multiple web pages
+# Load multiple web pages
 web_loader = WebBaseLoader(
     web_paths=[
         "https://www.ibm.com/think/topics/convolutional-neural-networks",
@@ -93,7 +68,7 @@ web_docs = web_loader.load()
 # -----------------------------
 # Load PDF Files
 # -----------------------------
-# ✅ Load single or multiple PDFs
+# Load single or multiple PDFs
 pdf_loader1 = PyPDFLoader("/content/Siddarth.pdf")
 pdf_docs = pdf_loader1.load()
 

@@ -1,6 +1,6 @@
 # RAG Multi-Agent System
 
-This project demonstrates a **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain** and **Groq models**.  
+This project demonstrates a **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain**, **Prompt** and **Groq models**.  
 It retrieves information from both web pages and local PDF files, embeds the content into a vector database (Chroma),  
 and answers user questions using a large language model.
 

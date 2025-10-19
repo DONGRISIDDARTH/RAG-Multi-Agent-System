@@ -59,8 +59,8 @@ vector_store = Chroma(
 # Load multiple web pages
 web_loader = WebBaseLoader(
     web_paths=[
-        "https://www.ibm.com/think/topics/convolutional-neural-networks",
-        "https://www.pmindia.gov.in/en/personal_life_story/personal-life-story/"
+        "https://www.abcd.com/think/topics/convolutional-neural-networks",
+        "https://www.abcd.gov.in/en/personal_life_story/personal-life-story/"
     ]
 )
 web_docs = web_loader.load()
